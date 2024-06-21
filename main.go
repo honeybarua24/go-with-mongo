@@ -24,6 +24,9 @@ func main() {
 	//Register app routes here
 	routes.AuthRoutes(router)
 	routes.UserRoutes(*router)
+	routes.GenreRoutes(*router)
+	routes.MovieRoutes(*router)
+	routes.ReviewRoutes(*router)
 	router.GET("/api", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"success": "Welcome to shive api!"})
